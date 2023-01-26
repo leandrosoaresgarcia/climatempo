@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.js">
@@ -14,57 +18,57 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
 
-        <div>
-            <input type="text" placeholder="Temperatura de qual cidade?">
+        <div class="header-container">
+            <input class="header__input" type="text" placeholder="Temperatura de qual cidade?">
 
-            <button>
-                <img src="#" alt="ícone de uma lupa">
+            <button class="header__button">
+                <img class="header__icon" src="assets/search-icon.svg" alt="ícone de uma lupa">
             </button>
 
         </div>
 
-        <div>...</div>
-        <div>...</div>
+        <div class="header__date">Hoje, 24 de Janeiro</div>
+        <div class="header__cityname">Diadema</div>
     </header>
 
-    <section>
-        <img src="" alt="">
+    <section class="temperature">
+        <img class="temperature__icon" src="assets/loading-icon.svg" alt="">
 
-        <div>...</div>
-        <div>Tempo agora</div>
-        <div>...</div>
+        <div class="temperature__weatherinfo">Nublado</div>
+        <div class="temperature__weathernow">Tempo agora</div>
+        <div class="temperature__degrees">24°C</div>
 
     </section>
 
-    <div>
-        <section>
-            <div>
-                <div>Vento</div>
-                <div>...</div>
+    <div class="details-container">
+        <section class="details">
+            <div class="details__item">
+                <div class="details__label">Vento</div>
+                <div class="details__value">19km</div>
             </div>
 
-            <div>
-                <div>Sensação</div>
-                <div>...</div>
+            <div class="details__item">
+                <div class="details__label">Sensação</div>
+                <div class="details__value">25°C</div>
             </div>
 
-            <div>
-                <div>Umidade</div>
-                <div>...</div>
+            <div class="details__item">
+                <div class="details__label">Umidade</div>
+                <div class="details__value">84%</div>
             </div>
         </section>
 
-        <section>
-            <div>
-                <img src="" alt="">
-                <div>...</div>
+        <section class="sun">
+            <div class="sun__item">
+                <img class="sun__icon" src="assets/sunrise.svg" alt="nascer do sol">
+                <div class="sun__value">5:39</div>
             </div>
 
-            <div>
-                <img src="" alt="">
-                <div>...</div>
+            <div class="sun__item">
+                <img class="sun__icon" src="assets/sunset.svg" alt="pôr do sol">
+                <div class="sun__value">18:57</div>
             </div>
         </section>
     </div>

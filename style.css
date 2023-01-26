@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #e6e9ff;
+    --black: #37363B;
+    --darkpink: #B4B2D4;
+    
+    scroll-behavior: smooth;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Inter', sem serifa;
+    -webkit-font-smoothing: antialiased;
+
+    background: linear-gradient(180deg, #f5f6ff 0%, #B4B2D4 100%);
+}
+
+/* header */
+
+.header {
+    margin-top: 50px;
+}
