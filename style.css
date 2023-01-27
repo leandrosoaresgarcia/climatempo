@@ -4,7 +4,7 @@
 
 :root {
     --pink: #e6e9ff;
-    --black: #37363B;
+    --black: #393939;
     --darkpink: #B4B2D4;
     
     scroll-behavior: smooth;
@@ -24,5 +24,46 @@ body {
 /* header */
 
 .header {
-    margin-top: 50px;
+    border: 1px solid black;
+    padding: 0 30px;
+}
+
+.header-container {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.header__input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 10px 0 0 10px;
+    appearance: none;
+    margin: -15px;
+}
+
+.header__button {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    border: none;
+    background: var(--black);
+    transition: 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header__button:hover {
+    filter: brightness(1.25);
+}
+
+.header__date,
+.header__cityname {
+    font-family: "Ubuntu", sans-serif;
 }
