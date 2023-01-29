@@ -6,6 +6,8 @@
     --pink: #e6e9ff;
     --black: #393939;
     --darkpink: #B4B2D4;
+    --pinklight: #a2a2be;
+    --pinknublado: #b6aef0;
     
     scroll-behavior: smooth;
 }
@@ -15,7 +17,8 @@ html {
 }
 
 body {
-    font-family: 'Inter', sem serifa;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
 
     background: linear-gradient(180deg, #f5f6ff 0%, #B4B2D4 100%);
@@ -24,7 +27,6 @@ body {
 /* header */
 
 .header {
-    border: 1px solid black;
     padding: 0 30px;
 }
 
@@ -56,7 +58,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .header__button:hover {
@@ -67,3 +70,51 @@ body {
 .header__cityname {
     font-family: "Ubuntu", sans-serif;
 }
+
+.header__date {
+    margin-top: 15px;
+    color: var(--pinklight);
+    font-size: 14px;
+}
+
+.header__cityname {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* temperature */
+
+.temperature {
+    border: 1px solid black;
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperature__icon {
+    margin-top: 15px;
+    width: 152px;
+}
+
+.temperature__weatherinfo {
+    margin-top: 30px;
+    color: var(--pinknublado);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.temperature__weathernow {
+    margin-top: 15px;
+    color: var(--pinklight);
+}
+
+.temperature__degrees {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* details */
