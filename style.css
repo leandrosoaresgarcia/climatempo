@@ -90,8 +90,7 @@ body {
 /* temperature */
 
 .temperature {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
 
     display: flex;
     flex-direction: column;
@@ -124,6 +123,7 @@ body {
 /* details */
 
 .details__container {
+    margin-top: 30px;
     background: var(--white);
     position: absolute; /* Permite total controle do elemento */
     bottom: 0;
