@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,16 +30,16 @@
 
         </div>
 
-        <div class="header__date">Hoje, 24 de Janeiro</div>
-        <div class="header__cityname">Diadema</div>
+        <div class="header__date" id="date">...</div>
+        <div class="header__cityname" id="cityname">...</div>
     </header>
 
     <section class="temperature">
-        <img class="temperature__icon" src="assets/loading-icon.svg" alt="">
+        <img class="temperature__icon" src="assets/loading-icon.svg" aria-hidden="true" alt="Ícone da temperatura atual">
 
-        <div class="temperature__weatherinfo">Nublado</div>
+        <div class="temperature__weatherinfo" id="weatherinfo">...</div>
         <div class="temperature__weathernow">Tempo agora</div>
-        <div class="temperature__degrees">24°C</div>
+        <div class="temperature__degrees" id="degrees">...</div>
 
     </section>
 
@@ -47,33 +47,34 @@
         <section class="details">
             <div class="details__item">
                 <div class="details__label">Vento</div>
-                <div class="details__value">19km</div>
+                <div class="details__value" id="wind">...</div>
             </div>
 
             <div class="details__item">
                 <div class="details__label">Sensação</div>
-                <div class="details__value">25°C</div>
+                <div class="details__value" id="sensation">...</div>
             </div>
 
             <div class="details__item">
                 <div class="details__label">Umidade</div>
-                <div class="details__value">84%</div>
+                <div class="details__value" id="moisture">...</div>
             </div>
         </section>
 
         <section class="sun">
             <div class="sun__item">
                 <img class="sun__icon" src="assets/sunrise.svg" alt="nascer do sol">
-                <div class="sun__value">5:39</div>
+                <div class="sun__value" id="sunrise">...</div>
             </div>
 
             <div class="sun__item">
                 <img class="sun__icon" src="assets/sunset.svg" alt="pôr do sol">
-                <div class="sun__value">18:57</div>
+                <div class="sun__value" id="sunset">...</div>
             </div>
         </section>
     </div>
 
+    <script src="app.js"></script>
 </body>
 
 </html>
