@@ -22,56 +22,99 @@
     <header class="header">
 
         <div class="header-container">
-            <input class="header__input" type="text" placeholder="Temperatura de qual cidade?">
+
+            <input id="city-search-input" 
+                   class="header__input" 
+                   type="text" 
+                   placeholder="Temperatura de qual cidade?">
 
             <button class="header__button">
-                <img class="header__icon" src="assets/search-icon.svg" alt="ícone de uma lupa">
+
+                <img id="city-search-button" 
+                     class="header__icon" 
+                     src="assets/search-icon.svg" 
+                     alt="ícone de uma lupa">
+
             </button>
 
         </div>
 
-        <div class="header__date" id="date">...</div>
-        <div class="header__cityname" id="cityname">...</div>
+        <div id="date" class="header__date">...</div>
+
+        <div id="cityname" class="header__cityname">...</div>
+
     </header>
 
     <section class="temperature">
-        <img class="temperature__icon" src="assets/loading-icon.svg" aria-hidden="true" alt="Ícone da temperatura atual">
 
-        <div class="temperature__weatherinfo" id="weatherinfo">...</div>
+        <img id="weather_icon" 
+             class="temperature__icon" 
+             src="assets/loading-icon.svg" 
+             aria-hidden="true" 
+             alt="Ícone da temperatura atual">
+
+        <div id="weatherinfo" class="temperature__weatherinfo">...</div>
+
         <div class="temperature__weathernow">Tempo agora</div>
-        <div class="temperature__degrees" id="degrees">...</div>
+
+        <div id="degrees" class="temperature__degrees">...</div>
 
     </section>
 
     <div class="details__container">
+
         <section class="details">
+
             <div class="details__item">
+
                 <div class="details__label">Vento</div>
-                <div class="details__value" id="wind">...</div>
+
+                <div id="wind" class="details__value">...</div>
+
             </div>
 
             <div class="details__item">
+
                 <div class="details__label">Sensação</div>
-                <div class="details__value" id="sensation">...</div>
+
+                <div id="sensation" class="details__value">...</div>
+
             </div>
 
             <div class="details__item">
+
                 <div class="details__label">Umidade</div>
-                <div class="details__value" id="moisture">...</div>
+
+                <div id="humidity" class="details__value">...</div>
+
             </div>
+
         </section>
 
         <section class="sun">
+
             <div class="sun__item">
-                <img class="sun__icon" src="assets/sunrise.svg" alt="nascer do sol">
+
+                <img class="sun__icon" 
+                     src="assets/sunrise.svg"     
+                     alt="nascer do sol">
+
                 <div class="sun__value" id="sunrise">...</div>
+
             </div>
 
             <div class="sun__item">
-                <img class="sun__icon" src="assets/sunset.svg" alt="pôr do sol">
+
+                <img class="sun__icon" 
+                     src="assets/sunset.svg" 
+                     alt="pôr do sol">
+
                 <div class="sun__value" id="sunset">...</div>
+
             </div>
+
         </section>
+        
     </div>
 
     <script src="app.js"></script>
