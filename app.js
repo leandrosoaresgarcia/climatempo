@@ -1,18 +1,21 @@
 // Interação variáveis
-const citySearchInput = document.getElementById("city-search-input");
+const citySearchBar = document.getElementById("city-search-input");
 const citySearchButton = document.getElementById("city-search-button");
 
 // Exibição variáveis
-const dateName = document.getElementById("date");
-const cityName = document.getElementById("cityname");
-const weatherIcon = document.getElementById("weather_icon");
-const weatherInfo = document.getElementById("weatherinfo");
-const degrees = document.getElementById("degrees");
-const wind = document.getElementById("wind");
-const sensation = document.getElementById("sensation");
-const humidity = document.getElementById("humidity");
-const sunrise = document.getElementById("sunrise");
-const sunset = document.getElementById("sunset");
+const currentDate = document.getElementById("current-date");
+const cityName = document.getElementById("city-name");
+const weatherIcon = document.getElementById("weather-icon");
+const weatherDescription = document.getElementById("weather-description");
+const currentTemperature = document.getElementById("current-temperature");
+const windSpeed = document.getElementById("wind-speed");
+const feelsLikeTemperature = document.getElementById("feels-like-temperature");
+const currentHumidity = document.getElementById("current-humidity");
+const sunriseTime = document.getElementById("sunrise-time");
+const sunsetTime = document.getElementById("sunset-time");
+
+
+/*
 
 const api_key = "e0c5a63b4949896b795fd59370ae7fb9";
 
@@ -68,17 +71,18 @@ function displayWeather(data) {
         sys: [{ sunrise, sunset }],
     } = data
 
-    dateName.textContent = formatDate(dt);
+    currentDate.textContent = formatDate(dt);
     cityName.textContent = name;
-    weatherIcon.src = `assets/${icon}.svg` 
-    weatherInfo.textContent = description;
-    degrees.textContent = `${Math.round(temp)}°C`;
-    wind.textContent = `${Math.round(speed * 3.6)}Km`;
-    sensation.textContent = `${Math.round(feels_like)}°C`;
-    humidity.textContent = `${humidity}%`;
-    sunrise.textContent = sunrise;
-    sunset.textContent = sunset;
+    weatherIcon.src = `/assets/${icon}.svg` 
+    weatherDescription.textContent = description;
+    currentTemperature.textContent = `${Math.round(temp)}°C`;
+    windSpeed.textContent = `${Math.round(speed * 3.6)}Km`;
+    feelsLikeTemperature.textContent = `${Math.round(feels_like)}°C`;
+    currentHumidity.textContent = `${humidity}%`;
+    sunriseTime.textContent = sunrise;
+    sunsetTime.textContent = sunset;
 }
+
 
 function formatDate (epochTime) {
     let date = new Date(epochTime * 1000)

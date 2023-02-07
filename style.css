@@ -39,7 +39,7 @@ body {
     margin: 0 auto;
 }
 
-.header-container {  
+.header__city-search-bar {  
     display: flex;
     justify-content: center;
     align-items: center;

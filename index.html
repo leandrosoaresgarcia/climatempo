@@ -8,8 +8,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Ubuntu:wght@400;500&display=swap" 
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Ubuntu:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -21,43 +21,60 @@
 <body>
     <header class="header">
 
-        <div class="header-container">
+        <div class="header__city-search-bar">
 
-            <input id="city-search-input" 
-                   class="header__input" 
-                   type="text" 
-                   placeholder="Temperatura de qual cidade?">
+            <input 
+                id="city-search-input" 
+                class="header__input" 
+                type="text" 
+                placeholder="Temperatura de qual cidade?">
 
-            <button class="header__button">
+            <button 
+                id="city-search-button" 
+                class="header__button">
 
-                <img id="city-search-button" 
-                     class="header__icon" 
-                     src="assets/search-icon.svg" 
-                     alt="ícone de uma lupa">
+                <img 
+                    class="header__icon" 
+                    src="assets/search-icon.svg" 
+                    alt="ícone de uma lupa">
 
             </button>
 
         </div>
 
-        <div id="date" class="header__date">...</div>
+        <div 
+            id="current-date" 
+            class="header__date">...
+        </div>
 
-        <div id="cityname" class="header__cityname">...</div>
+        <div 
+            id="city-name" 
+            class="header__cityname">...
+        </div>
 
     </header>
 
     <section class="temperature">
 
-        <img id="weather_icon" 
-             class="temperature__icon" 
-             src="assets/loading-icon.svg" 
-             aria-hidden="true" 
-             alt="Ícone da temperatura atual">
+        <img 
+            id="weather-icon" 
+            class="temperature__icon" 
+            src="assets/loading-icon.svg" 
+            aria-hidden="true"
+            alt="Ícone da temperatura atual">
 
-        <div id="weatherinfo" class="temperature__weatherinfo">...</div>
+        <div 
+            id="weather-description" 
+            class="temperature__weatherinfo">...
+        </div>
 
-        <div class="temperature__weathernow">Tempo agora</div>
+        <div 
+            class="temperature__weathernow">Tempo agora</div>
 
-        <div id="degrees" class="temperature__degrees">...</div>
+        <div 
+            id="current-temperature" 
+            class="temperature__degrees">...
+        </div>
 
     </section>
 
@@ -69,7 +86,10 @@
 
                 <div class="details__label">Vento</div>
 
-                <div id="wind" class="details__value">...</div>
+                <div 
+                    id="wind-speed" 
+                    class="details__value">...
+                </div>
 
             </div>
 
@@ -77,7 +97,10 @@
 
                 <div class="details__label">Sensação</div>
 
-                <div id="sensation" class="details__value">...</div>
+                <div 
+                    id="feels-like-temperature" 
+                    class="details__value">...
+                </div>
 
             </div>
 
@@ -85,7 +108,10 @@
 
                 <div class="details__label">Umidade</div>
 
-                <div id="humidity" class="details__value">...</div>
+                <div 
+                    id="current-humidity" 
+                    class="details__value">...
+                </div>
 
             </div>
 
@@ -95,37 +121,37 @@
 
             <div class="sun__item">
 
-                <img class="sun__icon" 
-                     src="assets/sunrise.svg"     
-                     alt="nascer do sol">
+                <img 
+                    class="sun__icon" 
+                    src="assets/sunrise.svg" 
+                    alt="nascer do sol">
 
-                <div class="sun__value" id="sunrise">...</div>
+                <div
+                    id="sunrise-time" 
+                    class="sun__value">...
+                </div>
 
             </div>
 
             <div class="sun__item">
 
-                <img class="sun__icon" 
-                     src="assets/sunset.svg" 
-                     alt="pôr do sol">
+                <img 
+                    class="sun__icon" 
+                    src="assets/sunset.svg" 
+                    alt="pôr do sol">
 
-                <div class="sun__value" id="sunset">...</div>
+                <div 
+                    id="sunset-time"
+                    class="sun__value" >...
+                </div>
 
             </div>
 
         </section>
-        
+
     </div>
 
     <script src="app.js"></script>
 </body>
 
 </html>
-
-<!--
-    [] colocar descrição dentro de ALT na weather icon
-    [] colocar aria-hidden="true" na weather icon
-    [] voltar os ... em todos os valores
-    [] colocar no atributo content o valor maximum-scale=1
-    [] observação sobre textos dentro de div
--->
