@@ -1,8 +1,7 @@
-// Interação variáveis
-const citySearchBar = document.getElementById("city-search-input");
+
+const citySearchInput = document.getElementById("city-search-input");
 const citySearchButton = document.getElementById("city-search-button");
 
-// Exibição variáveis
 const currentDate = document.getElementById("current-date");
 const cityName = document.getElementById("city-name");
 const weatherIcon = document.getElementById("weather-icon");
@@ -14,13 +13,8 @@ const currentHumidity = document.getElementById("current-humidity");
 const sunriseTime = document.getElementById("sunrise-time");
 const sunsetTime = document.getElementById("sunset-time");
 
-
-/*
-
 const api_key = "e0c5a63b4949896b795fd59370ae7fb9";
 
-
-// interação funções
 citySearchButton.addEventListener("click", () => {
     let cityName = citySearchInput.value
     getCityWeather(cityName)
@@ -48,45 +42,43 @@ function getCurrentLocationWeather(lat, lon) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${api_key}`)
     .then((response) => response.json())
     .then((data) => displayWeather(data))
-}
+}   
 
 function getCityWeather(cityName) {
 
-    weatherIcon.src = `assets/loading-icon.svg` 
+    weatherIcon.src = `assets/loading-icon.svg`
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=pt_br&appid=${api_key}`)
     .then((response) => response.json())
     .then((data) => displayWeather(data))
 }
 
-
-// exibição funções
 function displayWeather(data) {
     let {
         dt,
         name,
         weather: [{ icon, description }],
-        main: [{ temp, feels_like, humidity }],
-        wind: [{ speed }],
-        sys: [{ sunrise, sunset }],
+        main: { temp, feels_like, humidity },
+        wind: { speed },
+        sys: { sunrise, sunset },
     } = data
 
-    currentDate.textContent = formatDate(dt);
+    currentDate.textContent = dt;
     cityName.textContent = name;
-    weatherIcon.src = `/assets/${icon}.svg` 
+    weatherIcon.src = `assets/${icon}.svg`; 
     weatherDescription.textContent = description;
     currentTemperature.textContent = `${Math.round(temp)}°C`;
     windSpeed.textContent = `${Math.round(speed * 3.6)}Km`;
-    feelsLikeTemperature.textContent = `${Math.round(feels_like)}°C`;
-    currentHumidity.textContent = `${humidity}%`;
-    sunriseTime.textContent = sunrise;
-    sunsetTime.textContent = sunset;
+    feelsLikeTemperature.textContent = `${Math.round(feels_like)}°C`; 
+    currentHumidity.textContent = `${humidity}%`; 
+    sunriseTime.textContent = formatTime(sunrise);
+    sunsetTime.textContent = formatTime(sunset);
 }
 
 
 function formatDate (epochTime) {
     let date = new Date(epochTime * 1000)
-    let formattedDate = date.tolocaleDateString('pt-BR', { month: "long", day: 'numeric' })
+    let formattedDate = date.tolocaleDateString( 'pt-BR', { month: "long", day: 'numeric' })
     return `Hoje, ${formattedDate}` 
 }
 
